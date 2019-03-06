@@ -1,17 +1,14 @@
-package id.or.greenlabs.demo.jpa.dao;
+package id.haliri.israj.dao;
 
-import id.or.greenlabs.demo.jpa.dao.impl.StudentDAOImpl;
-import id.or.greenlabs.demo.jpa.entity.Address;
-import id.or.greenlabs.demo.jpa.entity.Student;
+import id.haliri.israj.dao.impl.StudentDAOImpl;
+import id.haliri.israj.entity.Address;
+import id.haliri.israj.entity.Student;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @Author krissadewo
- * @Date 16/01/18
- **/
 public class StudentDAOTest {
 
     private StudentDAO studentDAO;
@@ -20,16 +17,16 @@ public class StudentDAOTest {
         studentDAO = new StudentDAOImpl();
     }
 
-    @Test
+    @Before
     public void save() {
         Student student = new Student();
 
         Address address = new Address();
-        address.setCity("Yogyakarta");
+        address.setCity("JKT");
         address.setCountry("Indonesia");
         address.setStudent(student);
 
-        student.setName("kris");
+        student.setName("jhon");
         student.getAddresses().add(address);
 
         studentDAO.save(student);

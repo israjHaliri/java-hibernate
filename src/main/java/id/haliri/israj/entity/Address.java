@@ -1,11 +1,7 @@
-package id.or.greenlabs.demo.jpa.entity;
+package id.haliri.israj.entity;
 
 import javax.persistence.*;
 
-/**
- * @Author krissadewo
- * @Date 17/01/18
- **/
 @Entity
 @Table(name = "address")
 public class Address {

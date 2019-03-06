@@ -1,7 +1,8 @@
-package id.or.greenlabs.demo.jpa.orm;
+package id.haliri.israj.orm;
 
-import id.or.greenlabs.demo.jpa.entity.Address;
-import id.or.greenlabs.demo.jpa.entity.Student;
+import id.haliri.israj.entity.Address;
+import id.haliri.israj.entity.Student;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,10 +11,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.util.logging.Logger;
 
-/**
- * @Author krissadewo
- * @Date 16/01/18
- **/
+
 public class StudentBootStrapTest {
 
     private Logger log = Logger.getLogger(this.getClass().getName());
@@ -24,11 +22,11 @@ public class StudentBootStrapTest {
         student = new Student();
 
         Address address = new Address();
-        address.setCity("Yogyakarta");
+        address.setCity("JKT");
         address.setCountry("Indonesia");
         address.setStudent(student);
 
-        student.setName("kris");
+        student.setName("jhon");
         student.getAddresses().add(address);
     }
 
@@ -37,7 +35,6 @@ public class StudentBootStrapTest {
         save();
     }
 
-    //@Test
     private void save() {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
@@ -96,11 +93,12 @@ public class StudentBootStrapTest {
         em.close();
     }
 
-    @Test
+    @After
     public void delete() {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
-        em.persist(student);
+        student = em.find(Student.class, 1L);
+
         em.remove(student);
         em.getTransaction().commit();
         em.close();

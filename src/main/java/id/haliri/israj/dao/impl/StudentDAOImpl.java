@@ -1,7 +1,7 @@
-package id.or.greenlabs.demo.jpa.dao.impl;
+package id.haliri.israj.dao.impl;
 
-import id.or.greenlabs.demo.jpa.dao.StudentDAO;
-import id.or.greenlabs.demo.jpa.entity.Student;
+import id.haliri.israj.dao.StudentDAO;
+import id.haliri.israj.entity.Student;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -11,10 +11,6 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import java.util.Collection;
 
-/**
- * @Author krissadewo
- * @Date 16/01/18
- **/
 public class StudentDAOImpl implements StudentDAO {
 
     private EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("persistence-unit");

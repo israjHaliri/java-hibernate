@@ -1,13 +1,9 @@
-package id.or.greenlabs.demo.jpa.entity;
+package id.haliri.israj.entity;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @Author krissadewo
- * @Date 16/01/18
- **/
 @Entity
 @Table(name = "student")
 public class Student {

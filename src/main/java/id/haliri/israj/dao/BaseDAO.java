@@ -1,11 +1,7 @@
-package id.or.greenlabs.demo.jpa.dao;
+package id.haliri.israj.dao;
 
 import java.util.Collection;
 
-/**
- * @Author krissadewo
- * @Date 16/01/18
- **/
 public interface BaseDAO<T> {
 
     T save(final T entity);
