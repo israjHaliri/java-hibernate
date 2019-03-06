@@ -13,3 +13,5 @@
     + create schema testing
     + build project : mvn clean install -DskipTests
     + run project in target: mvn test
+    
+![alt text](https://github.com/israjHaliri/jpa-demo/blob/master/ss1.png)
